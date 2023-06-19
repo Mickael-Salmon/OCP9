@@ -104,6 +104,10 @@ Un document TXT contenant le lien vers le repository Github contenant un projet 
 
 
 > Livrables attendus 🔭
+
+Un ensemble d'instructions détaillant la configuration de l’environnement et le fonctionnement de l'application.</br>
+L'application, qui répond aux exigences énoncées dans le cahier des charges, et présente une structure de base de données équivalente à celle du schéma de la base de données.</br>
+Une interface utilisateur correspondant à celle conçue dans les wireframes, s’affichant côté serveur à l'aide du langage de template Django.</br>
 ##
 
 
@@ -114,13 +118,40 @@ Un document TXT contenant le lien vers le repository Github contenant un projet 
 ##
 
 ```
-├──
-│   ├──
-├──
-│   ├──
-└──
-    ├──
-
+litreview_project/
+│
+├── litreview/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── asgi.py
+│   ├── wsgi.py
+│
+├── reviews/
+│   ├── migrations/
+│   │   ├── __init__.py
+│   │   ├── 0001_initial.py
+│   │   └── ... (autres fichiers de migration)
+│   │
+│   ├── templates/
+│   │   ├── feed.html
+│   │   ├── ticket_snippet.html
+│   │   ├── review_snippet.html
+│   │   ├── login.html
+│   │   ├── register.html
+│   │   └── ... (autres fichiers de template)
+│   │
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── views.py
+│   └── urls.py
+│
+├── manage.py
+├── db.sqlite3
+└── README.md
 
 
 ```
