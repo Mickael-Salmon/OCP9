@@ -21,6 +21,7 @@ class Review(models.Model):
 
 
 class UserFollows(models.Model):
+
     # Your UserFollows model definition goes here
 
     class Meta:
