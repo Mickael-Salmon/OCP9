@@ -1,6 +1,10 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login
+from crispy_forms.helper import FormHelper
+from crispy_forms.layout import Submit
+from crispy_forms.bootstrap import FormActions
+
 # Create your views here.
 
 
@@ -13,4 +17,4 @@ def login_view(request):
             return redirect('home')
     else:
         form = AuthenticationForm()
-    return render(request, 'users/login.html', {'form': form})
+    return render(request, 'templates/lit_R/login.html', {'form': form})
