@@ -1,5 +1,5 @@
 """
-ASGI config for Projet project.
+ASGI config for Lit_REVIEW project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Projet.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Lit_REVIEW.settings')
 
 application = get_asgi_application()
