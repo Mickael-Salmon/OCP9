@@ -1,0 +1,82 @@
+{% extends "reviews/_base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="container p-0">
+  <div class="row mb-2">
+    <h1 class="col-8 py-2 mb-0">
+      {% if posts or pending_tickets %}
+        {{ title }}
+      {% endif %}
+    </h1>
+    <div class="btn-group col py-2 mt-2 mb-1" role="group">
+      <a type="button" class="btn btn-primary" href="{% url 'ticket-new' %}">Create Ticket</a>
+      <a type="button" class="btn btn-success" href="{% url 'review-new' %}">Write Review</a>
+    </div>
+  </div>
+</div>
+
+{% if pending_tickets %}
+<h2>Pending Review Requests</h2>
+  <ul>
+    {% for ticket in pending_tickets %}
+      <li>
+        <div class="card">
+          <div class="card-header">
+            <strong>Title:</strong> {{ ticket.title }}
+          </div>
+          <div class="card-body">
+            <p><strong>Description:</strong> {{ ticket.description }}</p>
+            {% if ticket.image %}
+              <img src="{{ ticket.image.url }}" alt="{{ ticket.title }}" width="200">
+            {% endif %}
+          </div>
+          <div class="card-footer">
+            <a href="{% url 'ticket-detail' ticket.id %}" class="btn btn-info">See More</a>
+            <a href="{% url 'review-new' %}" class="btn btn-success">Write Review</a>
+          </div>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}
+
+{% if posts %}
+
+  {% include 'reviews/_pagination.html' %}
+
+  {% for post in posts %}
+
+    {% if post.content_type == 'REVIEW' %}
+      {% include 'reviews/review_snippet.html' %}
+    {% elif post.content_type == 'TICKET' %}
+      {% include 'reviews/ticket_snippet.html' %}
+    {% endif %}
+
+  {% endfor %}
+
+  {% include 'reviews/_pagination.html' %}
+
+{% else %}
+
+<!-- No posts to display -->
+<div class="card text-center">
+  <div class="card-body">
+    <h5 class="card-title">No posts to display</h5>
+    {% if request.get_full_path == "/" %}
+      <p class="card-text">
+        <a href="{% url 'review-new' %}">Write</a> or
+        <a href="{% url 'ticket-new' %}">request</a> a review, or subscribe to a user to view their posts.
+      </p>
+      <a type="button" class="btn btn-success" href="{% url 'subscriptions' %}">View Subscriptions</a>
+    {% else %}
+      <p class="card-text">You have not written any posts yet. <a href="{% url 'review-new' %}">Write</a> or
+        <a href="{% url 'ticket-new' %}">request</a> a review to get started.
+      </p>
+    {% endif %}
+  </div>
+</div>
+
+{% endif %}
+
+{% endblock content %}

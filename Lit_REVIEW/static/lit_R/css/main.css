@@ -1,0 +1,105 @@
+﻿/* Variables */
+:root {
+    --primary-bg-color: #fafafa;
+    --text-color: #333333;
+    --header-color: #444444;
+    --secondary-bg-color: #ffffff;
+    --border-color: #dddddd;
+    --section-margin: 20px;
+    --star-color: #ffc107;
+    --inactive-star-color: #cccccc;
+}
+
+/* Global */
+body {
+    background: var(--primary-bg-color);
+    color: var(--text-color);
+    margin-top: 5rem;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--header-color);
+    font-weight: 600;
+}
+
+/* Lists */
+ul {
+    margin: 0;
+    padding-left: 1em;
+}
+
+/* Site Header */
+.site-header {
+    color: #ffffff;
+    background: #007bff; /* For more attractiveness */
+    padding: 1em;
+}
+
+/* Content Sections */
+.content-section {
+    background: var(--secondary-bg-color);
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px; /* Rounded corners for modern feel */
+    margin-bottom: var(--section-margin);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Replied Tickets */
+#replied-ticket {
+    background: var(--primary-bg-color);
+}
+
+/* Articles */
+.article-content {
+    white-space: pre-line;
+}
+
+.article-img {
+    height: 65px;
+    width: 65px;
+    margin-right: 16px;
+    border-radius: 50%; /* Circular images */
+}
+
+.article-metadata {
+    padding-bottom: 1px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+/* Star Ratings */
+#stars {
+    font-size: 22px;
+    color: var(--inactive-star-color);
+    display: inline;
+}
+
+.star-rating-1 i:first-child,
+.star-rating-2 i:first-child,
+.star-rating-3 i:first-child,
+.star-rating-4 i:first-child,
+.star-rating-5 i {
+    color: var(--star-color);
+}
+
+/* Thumbnails */
+.img-thumbnail {
+    height: 150px;
+    border-radius: 10px; /* Consistent with other elements */
+}
+
+/* Profile */
+.account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+    border-radius: 50%; /* Consistent with article images */
+}
+
+.account-heading {
+    font-size: 2.5rem;
+}

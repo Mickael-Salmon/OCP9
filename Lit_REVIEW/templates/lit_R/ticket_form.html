@@ -1,0 +1,34 @@
+{% extends "reviews/_base.html" %}
+{% load crispy_forms_tags %}
+{% load i18n %} <!-- Pour l'internationalisation -->
+
+{% block content %}
+
+<!-- Conteneur principal -->
+<div class="container">
+  <!-- Titre -->
+  <div class="row mb-2">
+    <h1 class="col-8 py-2 mb-0">{{ title }}</h1>
+  </div>
+</div>
+
+<!-- Section de contenu -->
+<div class="content-section">
+  <!-- Formulaire de post de critique -->
+  <form method="POST" enctype='multipart/form-data' class="needs-validation" novalidate>
+    {% csrf_token %}
+    <fieldset class="form-group">
+      <!-- Sous-titre -->
+      <h3 class="mb-4">{% trans "Book / Article" %}</h3>
+      <!-- Champs du formulaire -->
+      {{ form|crispy|add_class:"custom-class-for-fields" }}
+      <!-- Boutons d'action -->
+      <div class="float-right mt-3">
+        <a class="btn btn-link" href="{% url 'reviews-feed' %}">{% trans "Cancel" %}</a>
+        <button class="btn btn-success" type="submit">{% trans "Post" %}</button>
+      </div>
+    </fieldset>
+  </form>
+</div>
+
+{% endblock content %}
