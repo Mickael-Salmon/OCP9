@@ -1,51 +1,33 @@
 <div align="center">
-  <a href="" target="_blank" rel="noreferrer">
-    <img src="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png">
-  </a>
+
+![Python Logo](https://www.python.org/static/community_logos/python-logo-master-v3-TM.png)
+
+### Bienvenue ! Vous trouverez ici le Projet 9 du parcours [Développeur d'application - Python](https://openclassrooms.com/fr/paths/518-developpeur-dapplication-python) 👋
+
+## Développez une application Web en utilisant Django 💻 !
+
+![Project Image](https://user.oc-static.com/upload/2020/09/18/16004297044411_P7.png)
+
 </div>
 
+---
 
-<h3 align="center">
-
-Bienvenue ! Vous trouverez ici le Projet 9 du parcours<a href="https://openclassrooms.com/fr/paths/518-developpeur-dapplication-python" target="_blank" rel="noreferrer"> Développeur d'application - Python</a> 👋
-
-</h3>
-
-<h2 align="center">
-
-Développez une application Web en utilisant Django 💻 !
-
-</h2>
-
-> Scénario
-##
+### Scénario
 
 LITREVIEW a pour objectif de commercialiser un produit permettant à une communauté d'utilisateurs de consulter ou de solliciter une critique de livres à la demande.
 
-</br>
+---
 
-<div align="center">
-  <a href="" target="_blank" rel="noreferrer">
-    <img src="https://user.oc-static.com/upload/2020/09/18/16004297044411_P7.png">
-  </a>
-</div>
+### Objectif
 
+- Mettre en place une application web pour un MVP (Minimum Viable Product).
 
+---
 
-</br>
+### Cahier des charges
 
+#### Summary
 
-💬 Objectif :
-- mettre en place une application web pour notre MVP (minimum viable product, ou produit viable minimum).
-
-</br>
-💬 Cahier des charges
-
-##
-Summary
-##
-
-##
 Signup and login functionality are a must in terms of what you need for this MVP. When a user logs into the system, their feed is the first page they will see. There they can see the tickets and reviews of all users they follow. They should also see their own tickets and reviews, as well as any reviews in response to their own tickets - even if they do not follow the reviewer. (The logic around combining querysets of different model types can be complicated. Check the appendix at the end of this specification for some guidance on how to do this.)
 ##
 You can think of a ticket as a request for a review from a user. They post their ticket requesting a review for a book or literature article. Users who follow them can then submit their reviews in response to the ticket. Users should also be able to post reviews for books and articles that do not have a ticket yet.
@@ -55,119 +37,70 @@ Users will be able to follow other users and should also have the option to unfo
 You will also need another page from which users can review their own submissions. They should be able to see their posts and edit and delete them from this page.
 ##
 Remember, this is an MVP, so try not to get too caught up on styling. Focus more on a clean and minimal UI. However, you  should ensure things like date formats, styling, etc. are consistent across the site. Follow the layout of the wireframes provided, but don’t be afraid to add some personal touches if you wish, remember, clean and minimal.
-##
-##
-A user will need to:
-##
-    • Log in and sign up
-    • the site should not be accessible to a non-logged-in user
-    • View a feed containing the latest tickets and reviews from users that they follow ordered by time with the latest first.
-    • Create new tickets requesting a review on a book/article.
-    • Create reviews as a response to tickets.</br>
-    • Create reviews not in response to a ticket.  As part of a one-step process, the user will create a ticket and then a review responding to their own ticket.
-    • Be able to view, edit, and delete their own tickets and reviews
-    • Follow other users by entering their username
-    • View who they follow and unfollow whoever they want.
-##
-A developer will need to:</br>
-##
 
-    • Create a local environment using venv and run the site based on the detailed documentation laid out in the README.md.
-##
-The site will need to:</br>
-##
-    • Have a UI matching those of the wireframes.</br>
-    • Have a clean and minimal UI.</br>
-    • Use server-side rendering to display information from the database on the page dynamically.</br>
-##
-The codebase will need to:</br>
-##
-    • Use the Django framework.</br>
-    • Use the Django template language for server-side rendering.</br>
-    • Use SQLite as a local development DB (your db.sqlite3 file should be included in the repository).</br>
-    • Have a database design that matches the database schema.</br>  Have syntax that meets PEP8 guidelines.</br>
+#### A User Will Need To Do :
 
-##
-LIVRABLES
-##
-Un document TXT contenant le lien vers le repository Github contenant un projet Django avec :</br>
-- Un ensemble d'instructions détaillant la configuration de l’environnement et le fonctionnement de l'application.</br>
-- L'application, qui répond aux exigences énoncées dans le cahier des charges, et présente une structure de base de données équivalente à celle du schéma de la base de données.</br>
-- Une interface utilisateur correspondant à celle conçue dans les wireframes, s’affichant côté serveur à l'aide du langage de template Django.</br>
+- [x] Log in and sign up
+- [x] The site should not be accessible to a non-logged-in user
+- [x] View a feed containing the latest tickets and reviews from users that they follow, ordered by time with the latest first
+- [x] Create new tickets requesting a review on a book/article
+- [x] Create reviews as a response to tickets
+- [x] Create reviews not in response to a ticket. As part of a one-step process, the user will create a ticket and then a review responding to their own ticket
+- [x] Be able to view, edit, and delete their own tickets and reviews
+- [x] Follow other users by entering their username
+- [x] View who they follow and unfollow whoever they want
 
-</br>
+#### A Developer Will Need To Do :
 
-💬 Contraintes techniques:
+- [x] Create a local environment using venv
+- [x] Have a UI matching those of the wireframes
+- [x] Use server-side rendering to display information
+- [x] Use the Django framework
+- [x] Use SQLite as a local development DB
+- [x] Have a database design that matches the database schema
+- [x] Have syntax that meets PEP8 guidelines
 
-</br>
+---
 
+### Livrables
 
+- Un ensemble d'instructions détaillant la configuration de l’environnement et le fonctionnement de l'application.
+- L'application, qui répond aux exigences énoncées dans le cahier des charges.
+- Une interface utilisateur correspondant aux wireframes.
 
-> Livrables attendus 🔭
+---
 
-Un ensemble d'instructions détaillant la configuration de l’environnement et le fonctionnement de l'application.</br>
-L'application, qui répond aux exigences énoncées dans le cahier des charges, et présente une structure de base de données équivalente à celle du schéma de la base de données.</br>
-Une interface utilisateur correspondant à celle conçue dans les wireframes, s’affichant côté serveur à l'aide du langage de template Django.</br>
-##
+### Installation et démarrage du projet
 
+#### Récupération du projet
 
-
-</br>
-
-> Structure de dossiers du projet
-##
-
-```
-litreview_project/
-│
-├── litreview/
-│   ├── __init__.py
-│   ├── settings.py
-│   ├── urls.py
-│   ├── asgi.py
-│   ├── wsgi.py
-│
-├── reviews/
-│   ├── migrations/
-│   │   ├── __init__.py
-│   │   ├── 0001_initial.py
-│   │   └── ... (autres fichiers de migration)
-│   │
-│   ├── templates/
-│   │   ├── feed.html
-│   │   ├── ticket_snippet.html
-│   │   ├── review_snippet.html
-│   │   ├── login.html
-│   │   ├── register.html
-│   │   └── ... (autres fichiers de template)
-│   │
-│   ├── __init__.py
-│   ├── admin.py
-│   ├── apps.py
-│   ├── models.py
-│   ├── tests.py
-│   ├── views.py
-│   └── urls.py
-│
-├── manage.py
-├── db.sqlite3
-└── README.md
-
-
-```
-
-
-<h2> Installation et démarrage du projet</h2>
-
-<h3>Démarrer le server en local </h3>
-
-
-
-
-<h3>Récupération du projet</h3>
-
+```bash
 $ git clone https://github.com/Mickael-Salmon/OCP9/
+```
+#### Lancer le server
+```bash
+$ python manage.py runserver
+```
 
-<h3>Lancer le programme </h3>
+#### Accéder à l'application
 
+Depuis un navigateur : `127.0.0.1:8000`
 
+#### Utilisateurs de test
+
+**Admin**
+
+-   Admin : ocadmin1
+-   Password : PasswordAdmin123
+
+**Utilisateurs**
+
+Le mot de passe est toujours `Test.123!`
+
+-   John
+-   Jane
+-   Joshua
+-   Alfred
+-   Emilia
+-   Rebecca
+-   Tiffa
