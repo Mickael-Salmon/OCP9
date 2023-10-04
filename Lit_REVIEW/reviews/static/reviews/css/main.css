@@ -1,16 +1,24 @@
 body {
-    background-color: #e6d3a8;
+    background-color: #ffffff;
+    background-image: url("../img/Whatisyourstory.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: #333333;
     margin-top: 5rem;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: #444444;
+/* Changement de couleur du texte */
+h1, h2, h3, h4, h5, h6 {
+    color: white;
+    text-decoration: solid;  /* ou une autre couleur qui contraste bien */
+}
+
+
+/* Arrière-plan semi-transparent */
+.some-container {
+    background-color: rgba(0, 0, 0, 0.5);  /* Noir à 50% d'opacité */
+    padding: 15px;
 }
 
 ul {
